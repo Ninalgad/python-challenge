@@ -8,7 +8,7 @@ total = 0
 
 with open(file_path, encoding='UTF-8') as f:
     csvreader = csv.reader(f, delimiter=",")
-    header = next(csvreader)  # skip header
+    header = next(csvreader)  # stores the header row
 
     for (voter_id, county, candidate) in csvreader:
         total += 1

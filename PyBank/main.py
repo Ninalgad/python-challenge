@@ -13,7 +13,7 @@ max_decr_profits = {'value': 0, 'date': ''}
 
 with open(file_path, encoding='UTF-8') as f:
     csvreader = csv.reader(f, delimiter=",")
-    header = next(csvreader)  # skip header
+    header = next(csvreader)  # stores the header row
 
     for (date, profit_loss) in csvreader:
         unique_months.add(date)
