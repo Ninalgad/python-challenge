@@ -18,16 +18,18 @@ with open(file_path, encoding='UTF-8') as f:
         else:
             ballot[candidate] = 1
 
+# sort candidate names in alphabetical order for output
 sorted_candidate = sorted(ballot.keys())
 candidate_result_str = ""
-
 for c in sorted_candidate:
     percent = 100 * (ballot[c] / total)
     percent = round(percent, 2)
     candidate_result_str += f"{c} {percent}% ({ballot[c]})\n"
 
-winner = max(ballot, key=ballot.get)  # gets key with largest value
+# gets candidate with most votes
+winner = max(ballot, key=ballot.get)
 
+# output string
 output = f"""Election Results
 -------------------------
 Total Votes: {total}
@@ -37,7 +39,7 @@ Winner: {winner}
 -------------------------"""
 print(output)
 
+# save to file
 output_file = os.path.join('analysis', 'output.txt')
-
 with open(output_file, "w") as f:
     f.write(output)
