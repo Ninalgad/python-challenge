@@ -23,6 +23,7 @@ python-challenge
 
 
 -`PyPoll/main.py`:
+  - `sorted`: is a python built-in for sorting iterables, from the [documentation](https://docs.python.org/3/library/functions.html#sorted), lines: 21
   - `max(ballot, key=ballot.get)`:  gets key with largest value, from [stackoverflow](https://stackoverflow.com/a/280156), lines: 29
   - `"""`: string literals inside triple quotes can span multiple lines of text, from [Google for Education](https://developers.google.com/edu/python/strings), lines: 31-37
 
