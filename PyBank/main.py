@@ -2,7 +2,7 @@ import csv
 import os
 
 
-file_path = os.path.join('Resources', 'budget_data.csv')
+file_path = os.path.join('PyBank', 'Resources', 'budget_data.csv')
 
 unique_months = 0
 curr_ = None
@@ -50,6 +50,6 @@ Greatest Decrease in Profits: {max_decr_profits['date']} (${max_decr_profits['va
 print(output)
 
 # save to file
-output_file = os.path.join('analysis', 'output.txt')
+output_file = os.path.join('PyBank', 'analysis', 'output.txt')
 with open(output_file, "w") as f:
     f.write(output)

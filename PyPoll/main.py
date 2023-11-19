@@ -1,7 +1,7 @@
 import csv
 import os
 
-file_path = os.path.join('Resources', 'election_data.csv')
+file_path = os.path.join('PyPoll', 'Resources', 'election_data.csv')
 
 ballot = dict()
 total = 0
@@ -40,6 +40,6 @@ Winner: {winner}
 print(output)
 
 # save to file
-output_file = os.path.join('analysis', 'output.txt')
+output_file = os.path.join('PyPoll', 'analysis', 'output.txt')
 with open(output_file, "w") as f:
     f.write(output)
